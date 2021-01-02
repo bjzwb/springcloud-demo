@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amc.sc.mapper.EmpMapper">
+
+    <insert id="addEmp" parameterType="com.amc.sc.domin.Emp" >
+        INSERT INTO emp(emp_name,db_source) VALUES (#{empName},DATABASE())
+    </insert>
+
+    <select id="queryEmpById" resultType="com.amc.sc.domin.Emp">
+        SELECT * FROM emp WHERE tid= #{id}
+    </select>
+
+    <select id="queryAllEmp" resultType="com.amc.sc.domin.Emp">
+        SELECT * FROM emp
+    </select>
+</mapper>
