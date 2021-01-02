@@ -8,9 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="emp-server-8001" />
-        <module name="emp-api" />
-        <module name="emp-server-8003" />
         <module name="emp-server-8002" />
+        <module name="emp-server-8003" />
+        <module name="consumer-server" />
+        <module name="emp-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

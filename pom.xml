@@ -13,6 +13,7 @@
         <module>emp-server-8001</module>
         <module>emp-server-8002</module>
         <module>emp-server-8003</module>
+        <module>consumer-server</module>
     </modules>
 
     <properties>
