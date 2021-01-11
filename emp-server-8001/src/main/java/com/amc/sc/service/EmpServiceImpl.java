@@ -22,6 +22,11 @@ public class EmpServiceImpl implements EmpService {
 
     @Override
     public List<Emp> queryAllEmp() {
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return empMapper.queryAllEmp();
     }
 

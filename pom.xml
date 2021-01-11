@@ -13,6 +13,11 @@
         <module>emp-server-8001</module>
         <module>emp-server-8002</module>
         <module>emp-server-8003</module>
+        <module>consumer-server</module>
+        <module>eureka-server-7001</module>
+        <module>eureka-server-7002</module>
+        <module>eureka-server-7003</module>
+        <module>hystrix-dashboard-server</module>
     </modules>
 
     <properties>
@@ -28,21 +33,36 @@
         <dependencies>
 
             <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>Hoxton.SR8</version>
                 <type>pom</type>
-                <scope>runtime</scope>
+                <scope>import</scope>
+            </dependency>-->
+
+            <!-- https://spring.io/projects/spring-cloud#overview%20 -->
+
+            <!--<dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.3.3.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>-->
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
-
-            <!-- https://spring.io/projects/spring-cloud#overview%20  查看cloud与boot版本的对应关系-->
-
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.3.3.RELEASE</version>
+                <version>2.1.4.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

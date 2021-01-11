@@ -7,14 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="emp-server-8001" />
-        <module name="emp-api" />
+        <module name="eureka-server-7003" />
+        <module name="eureka-server-7002" />
+        <module name="eureka-server-7001" />
         <module name="emp-server-8003" />
+        <module name="consumer-server" />
+        <module name="emp-server-8001" />
         <module name="emp-server-8002" />
+        <module name="emp-api" />
+        <module name="hystrix-dashboard-server" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="emp-server-7001" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

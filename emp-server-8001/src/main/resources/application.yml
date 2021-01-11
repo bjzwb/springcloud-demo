@@ -8,16 +8,24 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.8.214:3306/sc?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://192.168.0.114:3306/sc?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
 
 #mybatis配置文件
 mybatis:
-  type-aliases-package: com.zwb.sc.pojo
+  type-aliases-package: com.amc.sc.domin
   mapper-locations: classpath:mybatis/mapper/*.xml
   config-location: classpath:mybatis/mybatis-config.xml
 
 info:
   app.name: ${spring.application.name}--${server.port}
   company.name: amc
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka/,http://eureka7002:7002/eureka/,http://eureka7003:7003/eureka/
+  instance:
+    instance-id: ${spring.application.name}---${server.port}
+    prefer-ip-address: true
