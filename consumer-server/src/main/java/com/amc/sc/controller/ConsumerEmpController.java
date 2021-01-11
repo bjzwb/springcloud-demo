@@ -17,21 +17,21 @@ public class ConsumerEmpController {
     private RestTemplate restTemplate;
 
 //    private static final String REST_URL_PREFIX = "http://SPRING-CLOUD-PROVIDER-EMP";
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    private static final String REST_URL_PREFIX = "http://SPRING-CLOUD-PROVIDER-EMP";
 
-    @GetMapping("/consumer/emp/list")
+//    @GetMapping("/consumer/emp/list")
     public List<Emp> queryAllEmp(){
         List<Emp> emps = restTemplate.getForObject(REST_URL_PREFIX + "/emp/list", List.class);
         return emps;
     }
 
-    @GetMapping("/consumer/emp/get/{tid}")
+//    @GetMapping("/consumer/emp/get/{tid}")
     public Emp queryEmpByTid(@PathVariable("tid") Long tid){
         Emp emp = restTemplate.getForObject(REST_URL_PREFIX + "/emp/get/" + tid, Emp.class);
         return emp;
     }
 
-    @PostMapping("/consumer/emp/add")
+//    @PostMapping("/consumer/emp/add")
     public String addEmp(Emp emp){
         String s = restTemplate.postForObject(REST_URL_PREFIX + "/emp/add", emp, String.class);
         return s;
